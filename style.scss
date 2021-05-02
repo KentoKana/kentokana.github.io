@@ -1,0 +1,78 @@
+$primary-font: "roboto";
+$primary-heading-font: "Caslon";
+$primary-color: rgb(0, 174, 255);
+@import "./resets.scss";
+@mixin highlight($height, $color) {
+  &::after {
+    left: 0;
+    content: "";
+    position: absolute;
+    display: inline;
+    height: $height;
+    width: 100%;
+    opacity: 0.5;
+    background-color: $color;
+    bottom: 0px;
+    transition: 0.2s ease all;
+    z-index: -1;
+  }
+}
+$muted: #575656;
+
+body {
+  font-family: $primary-font;
+  line-height: 1.5;
+}
+
+main {
+  margin: 2em;
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin: 10px 0;
+}
+
+p {
+  line-height: 1.8;
+}
+.heading {
+  &--primary {
+    font-family: $primary-heading-font;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+.highlight {
+  &--primary {
+    position: relative;
+    @include highlight(6px, $primary-color);
+    &:hover {
+      @include highlight(100%, $primary-color);
+    }
+  }
+}
+.contact {
+  &__list {
+    display: flex;
+    div {
+      margin: 2px;
+    }
+  }
+}
+.experience {
+  &__item {
+    margin-top: 15px;
+  }
+  &__company {
+    color: $primary-color;
+    font-weight: bold;
+  }
+  &__date {
+    font-style: italic;
+    color: $muted;
+  }
+}
