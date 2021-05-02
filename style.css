@@ -147,7 +147,8 @@ h1 {
   text-align: center;
 }
 
-main {
+main,
+footer {
   margin: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,7 +167,11 @@ p {
 }
 
 footer {
-  margin: 2em;
+  display: block;
+  padding: 2em;
+}
+
+footer .footer__container {
   text-align: center;
 }
 

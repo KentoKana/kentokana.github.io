@@ -38,7 +38,8 @@ h1 {
   text-align: center;
 }
 
-main {
+main,
+footer {
   margin: 2em;
   display: flex;
   max-width: 700px;
@@ -55,8 +56,13 @@ p {
 }
 
 footer {
-  margin: 2em;
-  text-align: center;
+  display: block;
+  padding: 2em;
+  .footer {
+    &__container {
+      text-align: center;
+    }
+  }
 }
 
 // class styling
