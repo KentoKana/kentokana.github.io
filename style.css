@@ -139,6 +139,14 @@ body {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+}
+
 main {
   margin: 2em;
   display: -webkit-box;
@@ -146,6 +154,7 @@ main {
   display: flex;
   max-width: 1000px;
   margin: auto;
+  padding: 0 20px;
 }
 
 section {
@@ -173,7 +182,7 @@ p {
   display: inline;
   height: 6px;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.3;
   background-color: #00aeff;
   bottom: 0px;
   -webkit-transition: 0.2s ease all;
@@ -188,7 +197,7 @@ p {
   display: inline;
   height: 100%;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.3;
   background-color: #00aeff;
   bottom: 0px;
   -webkit-transition: 0.2s ease all;
@@ -196,10 +205,18 @@ p {
   z-index: -1;
 }
 
-.contact__list {
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contact__list div {
@@ -218,5 +235,21 @@ p {
 .experience__date {
   font-style: italic;
   color: #575656;
+}
+
+.skills ul {
+  line-height: 2;
+  list-style: inside;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+@media screen and (max-width: 576px) {
+  .skills ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
 }
 /*# sourceMappingURL=style.css.map */

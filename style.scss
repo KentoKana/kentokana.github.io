@@ -1,7 +1,13 @@
+// Fonts
 $primary-font: "roboto";
 $primary-heading-font: "Caslon";
 $primary-color: rgb(0, 174, 255);
+$muted: #575656;
+
+// Imports
 @import "./resets.scss";
+
+// Mixins
 @mixin highlight($height, $color) {
   &::after {
     left: 0;
@@ -10,18 +16,26 @@ $primary-color: rgb(0, 174, 255);
     display: inline;
     height: $height;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.3;
     background-color: $color;
     bottom: 0px;
     transition: 0.2s ease all;
     z-index: -1;
   }
 }
-$muted: #575656;
 
+// General
 body {
   font-family: $primary-font;
   line-height: 1.5;
+}
+
+a {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
 }
 
 main {
@@ -29,6 +43,7 @@ main {
   display: flex;
   max-width: 1000px;
   margin: auto;
+  padding: 0 20px;
 }
 
 section {
@@ -38,6 +53,8 @@ section {
 p {
   line-height: 1.8;
 }
+
+// class styling
 .heading {
   &--primary {
     font-family: $primary-heading-font;
@@ -55,14 +72,19 @@ p {
     }
   }
 }
+
 .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
   &__list {
-    display: flex;
     div {
       margin: 2px;
     }
   }
 }
+
 .experience {
   &__item {
     margin-top: 15px;
@@ -74,5 +96,20 @@ p {
   &__date {
     font-style: italic;
     color: $muted;
+  }
+}
+
+.skills {
+  ul {
+    line-height: 2;
+    list-style: inside;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    @media screen and (max-width: 576px) {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
   }
 }
