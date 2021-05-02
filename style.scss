@@ -28,6 +28,8 @@ $muted: #575656;
 body {
   font-family: $primary-font;
   line-height: 1.5;
+  // background: black;
+  // color: white;
 }
 
 a {
@@ -44,7 +46,7 @@ footer {
   display: flex;
   max-width: 700px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 section {
@@ -107,6 +109,12 @@ footer {
   &__date {
     font-style: italic;
     color: $muted;
+  }
+  ul {
+    list-style: inside;
+    li {
+      margin: 5px 0;
+    }
   }
 }
 

@@ -155,7 +155,7 @@ footer {
   display: flex;
   max-width: 700px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 section {
@@ -245,6 +245,14 @@ footer .footer__container {
 .experience__date {
   font-style: italic;
   color: #575656;
+}
+
+.experience ul {
+  list-style: inside;
+}
+
+.experience ul li {
+  margin: 5px 0;
 }
 
 .skills ul {
