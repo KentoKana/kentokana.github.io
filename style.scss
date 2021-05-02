@@ -41,7 +41,7 @@ h1 {
 main {
   margin: 2em;
   display: flex;
-  max-width: 1000px;
+  max-width: 700px;
   margin: auto;
   padding: 0 20px;
 }
@@ -52,6 +52,11 @@ section {
 
 p {
   line-height: 1.8;
+}
+
+footer {
+  margin: 2em;
+  text-align: center;
 }
 
 // class styling
